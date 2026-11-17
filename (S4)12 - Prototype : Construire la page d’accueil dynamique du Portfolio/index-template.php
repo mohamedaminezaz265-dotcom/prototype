@@ -1,85 +1,56 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<header>
-    <h1>ZMA <span>.</span></h1>
-  <nav>
-    <?php foreach ($links as $link): ?>
-        <a href="<?= htmlspecialchars($link['url']) ?>">
-            <?= htmlspecialchars($link['label']) ?>
-        </a>
-    <?php endforeach; ?>
+    <header>
+<h1>ZMA <span>.</span></h1>
+<nav>
+<?php foreach($links as $link):?>
+<a href="<?= $link['lein'] ?>">
+<?= $link['titre'] ?>
+</a>
+<?php endforeach; ?>
 </nav>
 </header>
 
-<section class="hero">
-    <h1>ZAZ MOHAMED AMINE</h1>
-    <h2>Développeur web junior</h2>
-    <p>Bienvenue sur mon portfolio. Découvrez mes projets et mon travail.</p>
-    <br>
-    <a class="btn" href="#project">mes projets</a>
-</section>
+<section id="about" >
 
-<main>
-
-<section id="about">
-    <h1>Qui je suis ?</h1>
-    <h2>À propos de moi !</h2>
-    <br>
-    <p>Je suis un développeur web junior passionné par la création de sites web.</p>
-    <br><br>
-    <p class="skills">HTML - CSS - JavaScript - Git - GitHub</p>
-    <br>
-    <h1>MON TRAVAIL</h1>
-</section>
-
-<section id="project">
-
-    <?php foreach ($projets as $projet): ?>
-
-    <article class="card">
-        <h1><?= htmlspecialchars($projet['titre']) ?></h1>
-
-        <p><?= htmlspecialchars($projet['description']) ?></p>
-
-        <?php if ($projet['statut'] === 'termine'): ?>
-            <p>Projet terminé</p>
-        <?php else: ?>
-            <p>Projet en cours</p>
-        <?php endif; ?>
-
-        <a href="#">explore</a>
-    </article>
-
-    <?php endforeach; ?>
+<h1>ZAZ MOHAMED AMINE</h1>
+<h2>QUI JE SUIS ?</h2>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi in qui saepe debitis omnis sit praesentium quo repellendus doloremque atque. Aspernatur maxime libero, aut vero ab totam sed ipsa voluptatem Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae alias incidunt, reprehenderit non, illo dicta ipsa vitae tempore officia voluptates consequuntur pariatur et sunt accusantium obcaecati. Ea quaerat eaque suscipit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium aut fugit inventore. Ut soluta est autem voluptatibus, facilis ullam hic quaerat, accusamus laboriosam rerum error cumque nisi pariatur temporibus at.</p>
+<br><br>
+<h1 id="titre_projets">mes projects</h1>
 
 </section>
+<section id="projects">
+<?php foreach ($projects as $project):?>
+<article  class="card" >
+<h3 id="walo"><?= $project['titre'] ?></h3>
+<?= $project['description'] ?><br><br>
+<a href="#">explore</a>
+<br>
+<br></article><br>
+<?php endforeach;?>
 
-<section id="contact">
-    <h1>contact :</h1>
-   <ul>
-    <?php foreach ($contacts as $contact): ?>
-        <li>
-            <a href="<?= htmlspecialchars($contact['url']) ?>">
-                <?= htmlspecialchars($contact['label']) ?>
-            </a>
-        </li>
-    <?php endforeach; ?>
+</section>
+<section id="contact" >
+<h1>contact :</h1>
+<?php foreach($contacts as $contact):?>
+<ul>
+<li>
+<a href="<?= $contact['lein'] ?>"><?= $contact['titre'] ?></a>
+
+</li>
 </ul>
+<?php endforeach; ?>
 </section>
-
-</main>
-
 <footer>
-    <h1>&copy; ZAZ MOHAMED AMINE 2026</h1>
+<h1>&copy; ZAZ MOHAMED AMINE 2026</h1>
 </footer>
-
 </body>
 </html>
