@@ -62,19 +62,23 @@ font-weight: bolder;
 margin-bottom: 4px;
 font-size: larger;
 }
-#contact{
-padding: 10px;
-color: #292D32;
-background-color:#D4A373;
-font-family: Verdana, Geneva, Tahoma, sans-serif;
-display: flex;
-align-items: center;
-justify-content: space-between;
+
+#contact {
+    padding: 20px;
+    color: #292D32;
+    background-color: #D4A373;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-#contact ul{
-list-style: none;
-justify-content:flex-end;
+
+#contact ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
 }
+
 footer{
 padding: 10px;
 
