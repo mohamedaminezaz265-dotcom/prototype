@@ -46,8 +46,8 @@
 <a href="<?= $contact['lein'] ?>"><?= $contact['titre'] ?></a>
 
 </li>
-</ul>
-<?php endforeach; ?>
+<?php endforeach; ?></ul>
+
 </section>
 <footer>
 <h1>&copy; ZAZ MOHAMED AMINE 2026</h1>
